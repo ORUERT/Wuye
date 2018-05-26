@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.zzz.wuye"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled = true
+        ndk { //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "arm64-v8a", "x86_64", "mips", "mips64"
+        }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+//            minifyEnabled真
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+//    task nativeLibsToJar(type: Zip, description: "create a jar archive of the native libs") {
+//        destinationDir file("$projectDir/libs")
+//        baseName "Native_Libs2"
+//        extension "jar"
+//        from fileTree(dir: "libs", include: "**/*.so")
+//        into "lib"
+//    }
+    sourceSets {
+        main.jniLibs.srcDirs = ['libs']
+    }
+
+//    tasks.withType(JavaCompile) {
+//        compileTask -> compileTask.dependsOn(nativeLibsToJar)
+//    }
+    //删除META-INF信息
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/maven/com.squareup.okhttp3/okhttp/pom.xml'
+        exclude 'META-INF/maven/com.squareup.okhttp3/okhttp/pom.properties'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.xml'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.properties'
+        exclude 'META-INF/maven/com.google.code.gson/gson/pom.xml'
+        exclude 'META-INF/maven/com.google.code.gson/gson/pom.properties'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'me.weyye.hipermission:library:1.0.7'
+    //a edittext
+    compile 'com.wrapp.floatlabelededittext:library:0.0.6'
+    //a awesome button
+    compile 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
+    //material
+    compile 'com.github.rey5137:material:1.2.4'
+    compile 'com.android.support:support-v4:26.1.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:animated-vector-drawable:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'cn.aigestudio.datepicker:DatePicker:2.2.0'
+    //    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'org.litepal.android:core:1.6.1'
+    //    compile 'com.google.gson:gson:1.0.1'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.8.6'
+    //轮播
+    compile 'com.ryane.banner:banner-lib:0.7'
+    testCompile 'junit:junit:4.12'
+    //Bmob sdk
+    compile 'cn.bmob.android:bmob-sdk:3.6.0'
+    //Bmob 推送
+    compile 'cn.bmob.android:bmob-push:1.0.1'
+    //二维码
+    compile 'com.google.zxing:core:3.3.0'
+    //状态栏
+    compile 'com.githang:status-bar-compat:latest.integration'
+    //search
+    compile 'com.carson_ho:SearchLayout:1.0.1'
+    //CDN文件服务使用okhttp相关包进行文件的上传和下载（必填）
+    //    compile 'com.squareup.okio:okio:1.7.0'
+    compile('com.sangcomz:FishBun:0.6.5@aar') {
+        transitive = true
+    }
+    //生活缴费
+    compile group: 'com.alipay.sdk', name: 'alipay-sdk-java', version: '3.0.0'
+
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    //    compile 'cz.msebera.android:httpclient:4.3.6'
+    compile 'com.amap.api:location:latest.integration'
+    compile 'com.amap.api:search:latest.integration'
+    compile 'com.amap.api:3dmap:latest.integration'
+    //圆角头像
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+
+    //Butter knife
+    compile 'com.jakewharton:butterknife:6.1.0'
+    implementation files('libs/alipaySdk-20180403.jar')
+}

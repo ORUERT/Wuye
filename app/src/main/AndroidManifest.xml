@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zzz.wuye">
+
+    <!-- &lt;!&ndash; 用于进行网络定位 &ndash;&gt; -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <!-- &lt;!&ndash; 用于访问GPS定位 &ndash;&gt; -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <!-- &lt;!&ndash; 获取运营商信息，用于支持提供运营商信息相关的接口 &ndash;&gt; -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
+    <!-- &lt;!&ndash; 用于访问wifi网络信息，wifi信息会用于进行网络定位 &ndash;&gt; -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> -->
+    <!-- &lt;!&ndash; 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 &ndash;&gt; -->
+    <!-- <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> -->
+    <!-- &lt;!&ndash; 用于读取手机当前的状态 &ndash;&gt; -->
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <!-- &lt;!&ndash; 用于申请调用A-GPS模块 &ndash;&gt; -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> -->
+    <!-- &lt;!&ndash; 用于申请获取蓝牙信息进行室内定位 &ndash;&gt; -->
+    <!-- <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" /> -->
+    <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS" /> -->
+    <!-- <uses-permission android:name="android.permission.BLUETOOTH" /> -->
+    <!-- <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> -->
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+    <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
+
+
+    <!-- <&#45;&#45;!在SD卡中创建与删除文件权限&ndash;&gt; -->
+    <!--  -->
+    <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS" />
+    <!-- <&#45;&#45;!向SD卡写入数据的权限-&ndash;&gt; -->
+    <uses-permission android:name="androd.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- <&#45;&#45;!读取数据的权限-&ndash;&gt; -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 相机的权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 推送所需的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- sd卡读取权限 -->
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/timg"
+        android:installLocation="preferExternal"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/fitness_round"
+        android:supportsRtl="true"
+        android:theme="@style/wuyeTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="d96e08202a54e1d2da6d0cf08022ce31" />
+
+        <activity
+            android:name=".view.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".register.RegisterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.DateCheckActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ConfigActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- <activity -->
+        <!-- android:name=".view.ReleaseNewsActivity" -->
+        <!-- android:launchMode="singleTop" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".view.HomepageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".news.NewsDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.BeforeDateCheckActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.CommentsListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.FavorsListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".oldstuff.VideoPlayer"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape" />
+
+        <!-- test -->
+        <activity
+            android:name=".view.test.VideoPlayer"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape" />
+        <!-- test -->
+
+        <activity android:name=".payment.Payment" />
+        <activity android:name=".location.LocationtActivity" />
+        <activity android:name=".enterPage.view.easyPhoneNum_fragment" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".repairOnline.view.repairOnline" />
+        <activity android:name=".repairOnline.view.repairUploadOnline" />
+        <activity android:name=".report.view.report" />
+        <activity android:name=".location.placeActivity" />
+        <activity android:name=".location.view.addLocationActivity" />
+        <activity android:name=".report.addReportActivity" />
+        <activity android:name=".enterPage.view.normalListActivity" />
+        <activity android:name=".verify.VerifyActivity" />
+        <!-- TODO 集成：1.2、添加推送所需要的服务和广播 -->
+        <service
+            android:name="cn.bmob.push.lib.service.PushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":bmobpush">
+            <intent-filter>
+                <action android:name="cn.bmob.push.lib.service.PushService" />
+            </intent-filter>
+        </service>
+
+        <!-- 用于进程保活 -->
+        <service
+            android:name="cn.bmob.push.lib.service.PushNotifyService"
+            android:process=":bmobpush" />
+
+        <receiver android:name="cn.bmob.push.PushReceiver">
+            <intent-filter>
+
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- 解锁完成后会调用 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <!-- 监听网络连通性 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 第3步中创建的消息接收器，在这里进行注册 -->
+        <receiver android:name=".utils.MyPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.bmob.push.action.MESSAGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 接收心跳和唤醒的广播，要和PushService运行在同个进程 -->
+        <receiver
+            android:name="cn.bmob.push.PushNotifyReceiver"
+            android:process=":bmobpush">
+            <intent-filter>
+
+                <!-- 接收心跳广播的action -->
+                <action android:name="cn.bmob.push.action.HEARTBEAT" />
+                <!-- 接收唤醒广播的action -->
+                <action android:name="cn.bmob.push.action.NOTIFY" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".myFavorActivity.myFavor" />
+        <activity android:name=".myComment.myComment" />
+        <activity android:name=".payment.PaymentImageActivity" />
+        <activity android:name=".sellhouse.view.sellhouse" />
+        <activity android:name=".sellhouse.view.sellhouseDetail" />
+        <activity android:name=".repairOnline.view.repairDetail" />
+        <activity android:name=".sellhouse.view.sellhouseadd" />
+        <activity android:name=".exchange.exchange" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".exchange.exchangeDetail" />
+        <activity android:name=".exchange.exchangeadd" />
+        <activity android:name=".exchange.myexchange" />
+        <activity android:name=".exchange.search" />
+        <activity android:name=".sellhouse.view.mysellhouse"></activity>
+    </application>
+
+</manifest>

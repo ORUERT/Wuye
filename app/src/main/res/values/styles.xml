@@ -1,0 +1,112 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blue_content</item>
+        <item name="colorPrimaryDark">@color/blue_title</item>
+        <item name="colorAccent">@color/blue_title</item>
+    </style>
+
+    <style name="wuyeTheme" parent="AppTheme">
+    </style>
+
+    <style name="layout_title">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="title_right_button">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:background">@drawable/promotion_right_button_background_selector</item>
+        <item name="android:layout_width">80.0dip</item>
+    </style>
+
+    <style name="MyDialogStyle_center">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="Fuxk_24px_TextView" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/dd_dimen_24px</item>
+    </style>
+
+    <style name="Fuxk_Base_Content_Gray_Black_Style" parent="@style/Fuxk_24px_TextView">
+        <item name="android:textColor">@color/fuxk_base_color_gray_black</item>
+    </style>
+
+    <style name="Fuxk_28px_TextView" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/dd_dimen_28px</item>
+    </style>
+
+    <style name="Fuxk_Base_Content_28_Style" parent="@style/Fuxk_28px_TextView">
+        <item name="android:textColor">@color/fuxk_base_color_black</item>
+    </style>
+
+    <style name="Fuxk_Base_Content_24_Style" parent="@style/Fuxk_24px_TextView">
+        <item name="android:textColor">@color/fuxk_base_color_black</item>
+    </style>
+
+    <style name="Fuxk_32px_TextView" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/dd_dimen_32px</item>
+    </style>
+
+    <style name="Fuxk_Base_Title_Sub_Gray_Style" parent="@style/Fuxk_32px_TextView">
+        <item name="android:textColor">@color/fuxk_base_color_gray</item>
+    </style>
+
+    <style name="Fuxk_Base_Title_Sub_Style" parent="@style/Fuxk_32px_TextView">
+        <item name="android:textColor">@color/fuxk_base_color_black</item>
+    </style>
+
+    <style name="Fuxk_Base_Tip_Gray_Style" parent="@style/Fuxk_24px_TextView">
+        <item name="android:textColor">@color/fuxk_base_color_gray</item>
+    </style>
+
+    <style name="Fuxk_Base_Content_32_Style" parent="@style/Fuxk_32px_TextView">
+        <item name="android:textColor">@color/fuxk_base_color_black</item>
+    </style>
+
+    <style name="Fuxk_Base_Content_28px_Gray_Black_Style" parent="@style/Fuxk_28px_TextView">
+        <item name="android:textColor">@color/fuxk_base_color_gray_black</item>
+    </style>
+
+    <style name="zz_table_list_name">
+        <item name="android:background">@color/lightcyan</item>
+    </style>
+    <style name="zz_table_list_item">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <dimen name="radio_button_conner_radius">5dp</dimen>
+    <dimen name="radio_button_stroke_border">1dp</dimen>
+
+    <color name="radio_button_selected_color">@android:color/tab_indicator_text</color>
+    <color name="radio_button_unselected_color">@android:color/transparent</color>
+
+
+    <declare-styleable name="SegmentedGroup">
+        <attr name="sc_corner_radius" format="dimension" />
+        <attr name="sc_border_width" format="dimension" />
+        <attr name="sc_tint_color" format="color" />
+        <attr name="sc_checked_text_color" format="color" />
+    </declare-styleable>
+
+    <style name="RadioButton">
+        <item name="android:textColor">@drawable/button_text_color</item>
+        <item name="android:minHeight">33dp</item>
+        <item name="android:minWidth">70dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+
+</resources>

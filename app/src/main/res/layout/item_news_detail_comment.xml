@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/news_detail_image"
+        android:layout_width="47dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/fitness_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@id/news_detail_comment_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/app_name"
+        android:textColor="@color/darkgrey"
+        app:layout_constraintBaseline_toBaselineOf="@+id/news_detail_comment_username"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@id/news_detail_comment_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:ellipsize="start"
+        android:maxLines="1"
+        android:maxWidth="100dp"
+        android:text="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/news_detail_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/news_detail_commment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/app_name"
+        app:layout_constraintStart_toEndOf="@+id/news_detail_image"
+        app:layout_constraintTop_toBottomOf="@+id/news_detail_comment_username" />
+
+</android.support.constraint.ConstraintLayout>
